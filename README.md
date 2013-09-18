@@ -12,4 +12,4 @@ the compare core. If it is correct, the next manipulated file is generated. If t
 is logged and the test goes on.
 
 For a detailed description:
-https://github.com/TM90/ErrorInjection.wiki.git
+https://github.com/TM90/ErrorInjection/wiki/Detailed-documentation-Error-Injection-Tool
