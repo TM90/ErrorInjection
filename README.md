@@ -1,5 +1,3 @@
-Welcome to the ErrorInjection wiki!
-
 ## Summary
 The error injection tool is for inducing single errors into the FPGA configuration, to simulate the behaviour 
 of radiation induced single event effects (SEE) in the FPGA configuration. 
