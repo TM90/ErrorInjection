@@ -10,3 +10,6 @@ the radiation hardened design and not the test logic. Now the tool generates a m
 tool automatically opens impact and programs the FPGA, with the generated file. Now the Tool checks for a response of 
 the compare core. If it is correct, the next manipulated file is generated. If the response is incorrect the bitfile 
 is logged and the test goes on.
+
+For a detailed description:
+https://github.com/TM90/ErrorInjection.wiki.git
