@@ -30,7 +30,6 @@ def TryAgain():
     startImpact()
     TryTimer = threading.Timer(10,TryAgain)
     TryTimer.start()
- 
     
 def ReadData():
     
