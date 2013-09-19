@@ -13,3 +13,8 @@ is logged and the test goes on.
 
 For a detailed description:
 https://github.com/TM90/ErrorInjection/wiki/Detailed-documentation-Error-Injection-Tool
+
+For a step by step example how to use the tool:
+https://github.com/TM90/ErrorInjection/wiki/Example-Project
+
+
