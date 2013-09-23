@@ -77,7 +77,8 @@ def StartSimulating():
     TryTimer.start() 
 
 def startImpact():
-    subprocess.call('c:/Xilinx/14.4/ISE_DS/settings64.bat impact -batch prog.bat')
+    callString = gui.getXilPath() + "impact -batch prog.bat"
+    subprocess.call(callString)
  
 Trytimer = threading.Timer(10,TryAgain)
 bit = bitfile.bitfile()

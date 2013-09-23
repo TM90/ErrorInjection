@@ -17,6 +17,8 @@ class GUI(QtGui.QDialog):
         self.connect(self.ui.startInjection, QtCore.SIGNAL("clicked()"), startInjection)
         self.connect(self.ui.Bfile1, QtCore.SIGNAL("clicked()"),self.__cFileDialog)
         self.connect(self.ui.Bfile2, QtCore.SIGNAL("clicked()"),self.__dFileDialog)
+        self.connect(self.ui.Path,QtCore.SIGNAL("clicked()"),self.__PathDialog)
+        
     def __cFileDialog(self):
         filename = QtGui.QFileDialog.getOpenFileName(self, "Open File",".")
         self.ui.lineEdit_Cbitfile.setText(filename)
@@ -24,12 +26,19 @@ class GUI(QtGui.QDialog):
     def __dFileDialog(self):
         filename = QtGui.QFileDialog.getOpenFileName(self, "Open File",".")
         self.ui.lineEdit_Dbitfile.setText(filename)
+    
+    def __PathDialog(self):
+        filename = QtGui.QFileDialog.getOpenFileName(self,"Open File",".")
+        self.ui.lineEdit_Path.setText(filename)
         
     def getcBitfile(self):
         return str(self.ui.lineEdit_Cbitfile.text())
     
     def getdBitfile(self):
         return str(self.ui.lineEdit_Dbitfile.text())
+    
+    def getXilPath(self):
+        return str(self.ui.lineEdit_Path.text())
     
     def getNumberofErros(self):
         return self.ui.lineEdit_NoEI.text().toInt()[0]
