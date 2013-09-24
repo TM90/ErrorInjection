@@ -37,6 +37,8 @@ def ReadData():
     global error
     global count_biterr
     global TryTimer
+    global index
+    global List
     if(ser.inWaiting() >= 160): 
         TryTimer.cancel()
         for _ in range(10):        
@@ -50,7 +52,7 @@ def ReadData():
                 gui.ui.serConsole.append("ERROR\n")
                 error = 0
                 if (gui.getCheckboxLog() == True):
-                    bit.CopyBitfile("../temp/manipulate.bit", count_biterr)
+                    bit.CopyBitfile("manipulate.bit", count_biterr)
             gui.ui.serConsole.append("Index ")
             gui.ui.serConsole.append(str(count_biterr))
             count_biterr = count_biterr - 1
@@ -66,6 +68,8 @@ def ReadData():
 def StartSimulating():
     global count_biterr
     global TryTimer
+    global index
+    global List
     bit.GenerateMask(gui.getcBitfile(), gui.getdBitfile())
     SerialOpen()
     count_biterr = int(gui.getNumberofErros())
@@ -77,7 +81,7 @@ def StartSimulating():
     TryTimer.start() 
 
 def startImpact():
-    callString = gui.getXilPath() + "impact -batch prog.bat"
+    callString = gui.getXilPath() + " impact -batch prog.bat"
     subprocess.call(callString)
  
 Trytimer = threading.Timer(10,TryAgain)

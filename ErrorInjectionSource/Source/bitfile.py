@@ -71,7 +71,7 @@ class bitfile(object):
         
     def ManipulateBitfile(self, filename,start,end,endfile):
         fmask = open("../tmp/injection.msk", "rb")
-        fout1 = open("../tmp/manipulate.bit", "wb")
+        fout1 = open("manipulate.bit", "wb")
         self.setFile1(filename)
         f1 = self.getFile1().read(start)
         f2 = fmask.read(start)
